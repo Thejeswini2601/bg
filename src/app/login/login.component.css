@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body {
+  font-family: 'Poppins';
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+h3 {
+  font-family: 'Poppins';
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(249, 249, 249, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+
+input {
+  font-family:'Poppins';
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input.error-input {
+  border-color: #d9534f;
+}
+
+button {
+  font-family: 'Poppins';
+  width: calc(100% - 24px);
+  padding: 12px;
+  background-color: #278092;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #1e6375;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.error {
+  width: calc(100% - 24px);
+  color: #d9534f;
+  background-color: #f8d7da;
+  border: 1px solid #d9534f;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: none; /* Initially hidden */
+}
+
+.error.ng-star-inserted {
+  display: block; /* Show when error message is present */
+}
+
+.error-input::placeholder {
+  color: #d9534f;
+}

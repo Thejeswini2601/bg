@@ -1,0 +1,37 @@
+
+<body>
+  <div class="login-container">
+    <h3>Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <!-- Email Input -->
+      <label for="email">Email:</label>
+      <input 
+        id="email" 
+        formControlName="email" 
+        type="email" 
+        required
+        (focus)="onEmailFocus()"  
+        placeholder="Enter your email"
+        style="font-family: 'Poppins';">
+      <div *ngIf="emailError" class="error">{{ emailError }}</div>
+  
+      <!-- Password Input -->
+      <label for="password">Password:</label>
+      <input 
+        id="password" 
+        formControlName="password" 
+        type="password" 
+        required
+        (focus)="onPasswordFocus()" 
+        
+        placeholder="Enter your password">
+      <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+  
+      <!-- Login Button -->
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Link to Register Page -->
+    <p>Don't have an account? <a routerLink="/register">Register</a></p>
+  </div>
+</body>

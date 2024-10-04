@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins';
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('bgimg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/*.body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(200px); /* Adjust the blur level 
+    z-index: -1;
+}
+*/
+.top-banner {
+    width: 100%;
+    padding: 10px;
+    background: rgba(220, 220, 220, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+  }
+  h3{
+    font-family: 'Poppins';
+    text-align: center;
+  }
+  p{
+    font-family:'Poppins';
+    text-align: center;
+  }
+  
+
+.budget-container {
+    margin: auto;
+    margin-top: 130px; /* Space below the fixed header */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0.1, 0.1, 0, 0.2);
+    position: relative;
+    font-family:'Poppins';
+    z-index: 2 ;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 90;/* Ensure content is above background */
+}
+
+.results-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Allow the list to grow */
+    text-align: left;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #278092;
+    font-size: 35px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    font-family:'Poppins';
+    background-color: #278092;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0.3s ease;
+}
+button:hover{
+    transform: scale(1.05);
+    background-color: #2b3846;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.budget-results {
+    margin-top: 20px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.general-tips ul{
+    align-items: center;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2b3846;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #2b3846;
+  }
+  
+  .back-button img {
+    height: 20px;
+    margin-right: 8px;
+  }
+  .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Ensure it's on top of other content */
+}
+
+  

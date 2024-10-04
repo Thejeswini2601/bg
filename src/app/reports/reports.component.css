@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.top-banner {
+    width: 100%;
+    padding: 10px;
+    background: rgba(220, 220, 220, 0.8);    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; 
+}
+
+h3 {
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+p {
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    background-image: url('bgimg(1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100vh; /* Full height */
+}
+
+
+
+
+.report-container {
+    padding: 20px; /* Adjust the padding around the container if necessary */
+  }
+  
+  /* Bar Graph Section */
+  .bar-graph {
+    margin-top: 130px;
+    margin-bottom: 50px; /* Adjust this value to decrease space below the bar graph */
+  }
+  
+  /* Insights Box */
+  .insights-box {
+    margin-top: 0; /* Set to 0 for no space above the insights box */
+    padding: 15px; /* Internal padding */
+    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+  }
+  
+
+.sub-box {
+    background-color: #9a9494; /* White background for sub-boxes */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sub-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: translateY(-5px); /* Optional: slight lift on hover */
+}

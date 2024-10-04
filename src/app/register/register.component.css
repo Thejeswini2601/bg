@@ -1,0 +1,77 @@
+/* Import custom font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Ensure body uses Poppins font */
+  height: 100vh; /* Set the height to the full viewport */
+  margin: 0; /* Remove default body margins */
+  display: flex;
+  flex-direction: column; /* Arrange elements in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background-image: url('bg.png'); /* Background for the entire page */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif; /* Ensure heading uses Poppins font */
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px; /* Make the box wider */
+  margin: 100px auto; /* Center the box horizontally and add margin for vertical centering */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(249, 249, 249, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better visibility */
+  font-family: 'Poppins', sans-serif; /* Ensure container uses Poppins font */
+}
+
+label {
+  font-family: 'Poppins', sans-serif; /* Ensure labels use Poppins font */
+}
+
+input {
+  width: calc(100% - 24px); /* Adjust width to include padding */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+button {
+  width: calc(100% - 24px); /* Adjust width to include padding */
+  padding: 12px;
+  background-color: #278092;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Match the font size of the input fields */
+}
+
+button:hover {
+  background-color: #1e6375;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #d9534f; /* Error message color */
+}
+
+.error {
+  color: #d9534f; /* Error message color */
+  font-size: 14px; /* Adjust font size for error messages */
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

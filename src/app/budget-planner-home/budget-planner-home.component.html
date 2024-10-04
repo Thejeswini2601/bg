@@ -1,0 +1,64 @@
+<body>
+  <div class="home-container">
+  
+    <header class="top-banner">
+      <h3>Welcome to the Budget Planner</h3>
+      <p class="topic">Manage your finances easily and efficiently with our budget planning tool.</p>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </header>
+
+    <button class="back-button" (click)="goBack()">
+      <img src="path/to/your/back-icon.png" alt="Back">
+    </button>
+
+    <div class="content">
+      <br><br><br><br>
+      <div class="features">
+        <div class="feature-item" (click)="router.navigateByUrl('/budget-tips')">
+          <h3>Personalised Budgeting Tips</h3>
+          <p>Get tips on how to effectively save a portion of your salary each month.</p>
+        </div>
+
+        <div class="feature-item" (click)="router.navigateByUrl('/track-your-expenses')">
+          <h3>Track Your Expenses</h3>
+          <p>Keep an eye on your spending with our intuitive tracking features.</p>
+        </div>
+
+        <div class="feature-item" (click)="router.navigateByUrl('/set-goals')">
+          <h3>Set Budget Goals</h3>
+          <p>Set and manage your budget goals to stay on top of your finances.</p>
+        </div>
+        <div class="feature-item" (click)="navigateToReports()">
+          <h3>Analyze Reports</h3>
+          <p>Get detailed reports on your spending habits and budget progress.</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <footer class="bottom-banner">
+      <div class="queries">
+        <strong>Any queries?</strong> <a href="mailto:yaminib2165@gmail.com">Mail here</a>
+      </div>
+    </footer>
+
+    <!-- Settings Icon -->
+    <div class="settings-icon" (click)="toggleSettingsMenu()">
+      <i class="fas fa-cog"></i>
+    </div>
+
+    <!-- Settings Menu -->
+    <div *ngIf="isSettingsMenuVisible" class="settings-menu">
+      <button class="close-menu" (click)="toggleSettingsMenu()">X</button>
+      <ul>
+        <li>
+          <i class="fas fa-user"></i> Profile
+        </li>
+        <li (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>

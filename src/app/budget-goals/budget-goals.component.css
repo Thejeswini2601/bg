@@ -1,0 +1,227 @@
+/* Ensure the html and body take up the full height of the viewport */
+html, body {
+  height: 100%; /* Ensure full height for the body */
+  margin: 0; /* Remove default margin */
+  font-family: 'Poppins';
+  padding: 0; /* Remove default padding */
+}
+.top-banner {
+  width: 100%;
+  padding: 5px 10px;
+  background: rgba(220, 220, 220, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  font-family: 'Poppins';
+  
+}
+h3{
+  font-family: 'Poppins';
+  text-align: center;
+  margin-bottom:5px;
+ 
+}
+p{
+  font-family:'Poppins';
+  text-align: center;
+  margin-top: 0;
+
+}
+.budget-planner {
+  background-image: url('./bgimg(1).jpg'); /* Relative path to the image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  min-height: 100vh; /* Cover full viewport height */
+  display: flex;
+  flex-direction: column;
+  font-family:'Poppins';
+  justify-content: flex-start; /* Align content to the start */
+  align-items: center; /* Center align items */
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure navbar takes full width */
+   /* Optional: Semi-transparent background for navbar */
+}
+.budget-container {
+  margin: 240px; 
+  /* Space below the fixed header */
+  padding: 60px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.744);
+  position: relative;
+  font-family:'Poppins';
+  z-index: 3; /* Ensure content is above background */
+}
+.nav-button {
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 10px 20px;
+  background-color: #2b3846;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #2b3846;
+}
+/*
+.home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #1e6375; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.home-button:hover {
+  background-color: #1e6375; 
+*/
+.budget-planner {
+  font-family:'Poppins';
+  text-align: center;
+}
+
+.input-section, .emi-section {
+  margin: 20px auto;
+  font-family:'Poppins';
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  font-family:'Poppins';
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-family:'Poppins';
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #1e6375;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2b3846;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+table {
+  margin: 0 auto; /* Centers the table */
+  width: auto; /* Adjust width based on content */
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-family:'Poppins';
+}
+
+table, th, td {
+  border: 1px solid #34bdc2;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #3993ce;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #56a9c4;
+}
+
+/* Optional: limit the max width of the table */
+table {
+  max-width: 400px; 
+  font-family:'Poppins';/* Adjust this value based on your preference */
+}
+button {
+  font-family:'Poppins';
+  background-color: #278092;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0.3s ease;
+}
+button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2b3846;
+  color: white;
+  border: none;
+  font-family:'Poppins';
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-family:'Poppins';
+}
+
+.back-button:hover {
+  background-color: #2b3846;
+}
+
+.back-button img {
+  height: 20px;
+  margin-right: 8px;
+}
+.back-button {
+position: absolute;
+top: 10px;
+left: 20px;
+z-index: 10; /* Ensure it's on top of other content */
+}
+

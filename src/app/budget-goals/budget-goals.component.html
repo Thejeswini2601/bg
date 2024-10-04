@@ -1,0 +1,95 @@
+<body>
+<div class="budget-planner">
+ 
+  <header class="top-banner">
+  <button (click)="goBack()" class="back-button"> < Back</button>
+  <div class="navbar">
+    <button (click)="navigateToSavings()" class="nav-button">Calculate Savings</button>
+    <button (click)="navigateToEMI()" class="nav-button">Calculate EMI</button>
+  </div>
+      <h3>Welcome to the Budget Planner</h3>
+      <p class="topic">Manage your finances easily and efficiently with our budget planning tool.</p>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </header>
+    <div class="budget-container">
+    <div *ngIf="showSavings">
+    <div class="input-section">
+      <label>What do you want to buy?</label>
+      <input type="text" placeholder="Enter item" [(ngModel)]="itemToBuy">
+
+      <label>Total Cost</label>
+      <input type="number" placeholder="Enter total cost" [(ngModel)]="totalCost">
+
+      <label>Target Date</label>
+      <input type="date" [(ngModel)]="targetDate">
+
+      <label>Monthly Salary</label>
+      <input type="number" placeholder="Enter monthly salary" [(ngModel)]="monthlySalary">
+
+      <button (click)="calculateSavingsPlan()">Set Goal</button>
+    </div>
+
+    <!-- Display Monthly Saving Plan with Target Date in Tabular Form -->
+    <div *ngIf="savingPlanWithTarget.length > 0">
+      <h2>Monthly Saving Plan (With Target Date)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let month of savingPlanWithTarget; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>₹{{ month }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Display Monthly Saving Plan without Target Date in Tabular Form -->
+    <div *ngIf="savingPlanWithoutTarget.length > 0">
+      <h2>Monthly Saving Plan (Without Target Date)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let month of savingPlanWithoutTarget; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>₹{{ month }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Total Months Needed: {{ monthsNeeded }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="showEMI">
+    <div class="emi-section">
+      <h2>Comparison with EMI</h2>
+
+      <label>Amount</label>
+      <input type="number" placeholder="Enter amount" [(ngModel)]="loanAmount">
+
+      <label>Interest Rate (%)</label>
+      <input type="number" placeholder="Enter interest rate" [(ngModel)]="interestRate">
+
+      <label>Months</label>
+      <input type="number" placeholder="Enter months" [(ngModel)]="loanTenure">
+
+      <button (click)="calculateEMI()">Calculate EMI</button>
+
+      <div *ngIf="emiResult">
+        <p>Your EMI: ₹{{ emiResult | number:'1.0-2' }}/month</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>

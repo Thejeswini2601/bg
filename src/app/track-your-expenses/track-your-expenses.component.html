@@ -1,0 +1,68 @@
+<body>
+    <header class="top-banner">
+      <button (click)="goBack()" class="back-button"> < Back</button>
+        <h3>Welcome to the Budget Planner</h3>
+        <p class="topic">Manage your finances easily and efficiently with our budget planning tool.</p>
+      </header>
+    <div class="track-expenses-container">
+  
+      <!--<button (click)="goBack()" class="go-back-button">Go Back</button>-->
+  
+      <h2>Add Your Expenses</h2>
+
+      <div class="input-fields">
+        <div class="input-group">
+          <label for="category">Select Category</label>
+          <select id="category" [(ngModel)]="selectedCategory" required>
+            <option value="">Select Category</option>
+            <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+            
+          </select>
+          <input *ngIf="selectedCategory === 'Other'" type="text" [(ngModel)]="otherCategory" placeholder="Type here" required />
+  
+          <!-- Validation message for category -->
+          <div *ngIf="isSubmitted && !selectedCategory" class="error-message">
+            Category is required.
+          </div>
+        </div>
+  
+        <div class="input-group">
+          <label for="amount">Enter Amount</label>
+          <input type="number" id="amount" [(ngModel)]="expenseAmount" placeholder="Amount" required min="0.01" />
+  
+          <!-- Validation message for amount -->
+          <div *ngIf="isSubmitted && !expenseAmount" class="error-message">
+            Amount is required.
+          </div>
+        </div>
+  
+        <div class="input-group">
+          <label for="date">Select Date</label>
+          <input type="date" id="date" [(ngModel)]="expenseDate" />
+        </div>
+      </div>
+  
+      <!-- Disable the button until validation passes -->
+      <button (click)="addExpense()" [disabled]="!isValidForm()">Add Expense</button>
+  
+      <div class="expense-list">
+        <h3>Expense List</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let expense of expenseList">
+              <td>{{ expense.category }}</td>
+              <td>{{ expense.amount }}</td>
+              <td>{{ expense.date }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>

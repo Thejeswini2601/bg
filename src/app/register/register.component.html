@@ -1,0 +1,55 @@
+<body>
+  <div class="register-container">
+    <h3>Register</h3>
+
+    <!-- Display general form error if exists -->
+    <div *ngIf="formError" class="error">{{ formError }}</div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <!-- Username Input -->
+      <label for="username">Username:</label>
+      <input 
+        id="username" 
+        formControlName="username" 
+        type="text" 
+        required 
+        (focus)="onUsernameFocus()" 
+        placeholder="Enter your username" 
+      />
+      <div *ngIf="usernameError" class="error">{{ usernameError }}</div>
+      
+      <!-- Email Input -->
+      <label for="email">Email:</label>
+      <input 
+        id="email" 
+        formControlName="email" 
+        type="email" 
+        required 
+        (focus)="onEmailFocus()" 
+        placeholder="Enter your email" 
+      />
+      <div *ngIf="emailError" class="error">{{ emailError }}</div>
+      
+      <!-- Password Input -->
+      <label for="password">Password:</label>
+      <input 
+        id="password" 
+        formControlName="password" 
+        type="password" 
+        required 
+        (focus)="onPasswordFocus()" 
+        placeholder="Enter your password" 
+      />
+      <div *ngIf="passwordErrors" class="error">
+        <div *ngIf="passwordErrors.upperCase">Password must contain at least one uppercase letter</div>
+        <div *ngIf="passwordErrors.lowerCase">Password must contain at least one lowercase letter</div>
+        <div *ngIf="passwordErrors.specialChar">Password must contain at least one special character</div>
+      </div>
+      
+      <!-- Register Button -->
+      <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a routerLink="/login">Login</a></p>
+  </div>
+</body>

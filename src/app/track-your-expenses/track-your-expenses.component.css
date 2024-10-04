@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+.top-banner {
+    width: 100%;
+    padding: 10px;
+    background: rgba(220, 220, 220, 0.8);    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+  }
+  h3{
+    font-family: 'Poppins';
+    text-align: center;
+  }
+  h2{
+    margin-top: 20px;
+    font-family: 'Poppins';
+    text-align: center;
+  }
+  p{
+    font-family:'Poppins';
+    text-align: center;
+  }
+body {
+    font-family: 'Poppins', sans-serif; /* Ensure body uses Poppins font */
+    /* Set the height to the full viewport */
+    margin: 0; /* Remove default body margins */
+    display: flex;
+    /* Arrange elements in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-image: url('bgimg(1).jpg'); /* Background for the entire page */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+.track-expenses-container {
+    font-family: 'Poppins';
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 500px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    position: relative; /* Positioning context for child elements */
+    z-index: 2; /* Ensure it appears above the background */
+  }
+  .track-expenses-container:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  .input-fields {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Space between fields and button */
+  }
+  
+  .input-group {
+    font-family: 'Poppins';
+    flex: 1 1 30%; /* Adjust width of each input group */
+    margin: 5px; /* Space between input groups */
+  }
+  
+  button {
+    font-family: 'Poppins';
+    background-color: #278092;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2b3846;
+  }
+  button {
+    font-family:'Poppins';
+    background-color: #278092;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0.3s ease;
+}
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+  
+  .expense-list {
+    font-family: 'Poppins';
+    margin-top: 20px;
+    background-color: rgba(240, 240, 240, 0.9); /* Light grey background for the expense list */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  table {
+    font-family: 'Poppins';
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: rgba(220, 220, 220, 0.8); /* Header background */
+  }
+  
+  tbody tr:hover {
+    background-color: rgba(240, 240, 240, 0.7); /* Row hover effect */
+  }
+  
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2b3846;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #2b3846;
+}
+
+.back-button img {
+  height: 20px;
+  margin-right: 8px;
+}
+.back-button {
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 10; /* Ensure it's on top of other content */
+}
+

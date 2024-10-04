@@ -1,0 +1,64 @@
+<!-- budgeting-tips.component.html -->
+<body>
+    <header class="top-banner">
+      <button (click)="goBack()" class="back-button"> < Back</button>
+      <h3 >Welcome to the Budget Planner</h3>
+      <p >Manage your finances easily and efficiently with our budget planning tool.</p>
+    </header>
+    
+    <div class="budget-container">
+      <!-- Button Sections -->
+      <div class="button-section">
+        <button (click)="scrollTo50_30_20()">Budgeting Tips (50/30/20 Rule)</button>
+        <button (click)="scrollToGeneralTips()">General Budgeting Tips</button>
+      </div>
+  
+      <!-- 50-30-20 Rule Section -->
+      <div #ruleSection *ngIf="showRule" class="rule-section">
+        <form [formGroup]="budgetForm" (ngSubmit)="calculateBudget()">
+          <div class="form-group">
+            <label for="salary">Enter your salary:</label>
+            <input
+              type="number"
+              id="salary"
+              formControlName="salary"
+            />
+            <div *ngIf="budgetForm.get('salary')?.invalid && budgetForm.get('salary')?.touched" class="error">
+              Please enter a valid salary.
+            </div>
+          </div>
+          <button type="submit" [disabled]="budgetForm.invalid">Calculate</button>
+        </form>
+  
+        <div *ngIf="salary > 0" class="budget-results">
+          <div class="results-wrapper">
+            <ul>
+              <li><strong>Needs (50%):</strong> ₹{{ needs }}</li>
+              <li><strong>Wants (30%):</strong> ₹{{ wants }}</li>
+              <li><strong>Savings (20%):</strong> ₹{{ savings }}</li>
+            </ul>
+  
+            <!-- Highcharts Pie Chart -->
+            <highcharts-chart
+              [Highcharts]="Highcharts"
+              [options]="chartOptions"
+              style="width: 100%; height: 400px; display: block;"
+            >
+            </highcharts-chart>
+          </div>
+        </div>
+      </div>
+  
+      <!-- General Tips Section -->
+      <div #tipsSection *ngIf="showTips" class="general-tips">
+        <ul>
+          <li>Track your spending.</li>
+          <li>Set realistic financial goals.</li>
+          <li>Cut down on unnecessary expenses.</li>
+          <li>Save regularly, even in small amounts.</li>
+          <li>Create and stick to a budget.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  
